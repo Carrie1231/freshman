@@ -1,0 +1,25 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("please input two numbers:");
+        int a=s.nextInt();
+        int b=s.nextInt();
+        int t=0;
+        if(a<b){
+            t=b;
+            b=a;
+            a=t;
+        }
+        int c=a%b;
+        while(c!=0){
+            a=b;
+            b=c;
+            c=a%c;
+        }
+        int m=a*t/b;
+        System.out.println("最大公约数："+b+"最小公倍数："+m);
+
+    }
+}
